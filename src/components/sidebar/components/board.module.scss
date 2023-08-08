@@ -1,0 +1,51 @@
+.board,
+.hideBoard {
+   width: 100%;
+   height: 48px;
+   color: #828FA3;
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+   padding: 14px 32px;
+   gap: 16px;
+   cursor: pointer;
+   transition: all 0.1s;
+   border-radius: 0px 100px 100px 0px;
+   font-family: var(--font-plus-jakarta-sans);
+
+
+   &:active {
+      transform: scale(0.97);
+   }
+
+   .icon {
+      font-size: 25px;
+      color: #828FA3;
+   }
+}
+
+.hideBoard {
+   display: none;
+}
+
+.board.active,
+.hideBoard.active {
+   color: #fff;
+   border-radius: 0px 100px 100px 0px;
+   background: #635FC7;
+
+   .icon {
+      font-size: 25px;
+      color: #fff;
+   }
+}
+
+@media(max-width: 500px) {
+   .board {
+      display: none;
+   }
+
+   .hideBoard {
+      display: flex;
+   }
+}

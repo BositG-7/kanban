@@ -1,0 +1,114 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  max-height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 50px;
+
+  .subtask {
+    width: 480px;
+    padding: 32px;
+    border-radius: 6px;
+    background: var(--white, #fff);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    height: 80vh;
+    max-height: 800px;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        color: var(--black, #000112);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      i {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      color: var(--medium-grey, #828fa3);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    span {
+      color: var(--medium-grey, #828fa3);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 150px;
+      overflow: auto;
+
+      li {
+        padding: 12px;
+        border-radius: 4px;
+        background: var(--light-grey-light-bg, #f4f7fd);
+        color: var(--black, #000112);
+        font-size: 12px;
+        font-weight: 700;
+
+        label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+      }
+    }
+
+    select {
+      padding: 6px 16px;
+      border-radius: 4px;
+      border: 1px solid rgba(130, 143, 163, 0.25);
+      color: var(--black, #000112);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+  &.dark {
+    .subtask {
+      background-color: #2b2c37;
+      color: #fff;
+      h2 {
+        color: #fff;
+      }
+      select {
+        background-color: #2b2c37;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    .subtask {
+      width: 90%;
+    }
+  }
+}

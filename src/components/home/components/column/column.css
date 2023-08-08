@@ -1,0 +1,10 @@
+.motion-container {
+  overflow: hidden; /* pastdagi ma'lumotlarni tepagi ko'rinishiga o'girish */
+  max-height: 0; /* ma'lumotlarning to'liq o'lchami */
+  transition: max-height 0.3s ease-in-out; /* o'lchamning o'zgarishining animatsiyasi */
+}
+
+/* Bu klass pastdagi ma'lumotlarning ko'rinishi ochiq bo'lganda o'rnatiladi */
+.motion-container.open {
+  max-height: 1000px; /* ma'lumotlarning o'lchami ochiq bo'lganda qanday o'lchamga yetishganligini aniqlash uchun kattalashtirish */
+}

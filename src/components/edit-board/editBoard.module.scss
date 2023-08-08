@@ -1,0 +1,111 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  max-height: 1000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 50px;
+
+  .editBoard {
+    width: 480px;
+    padding: 32px;
+    border-radius: 6px;
+    background: var(--white, #fff);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    height: 80vh;
+    max-height: 800px;
+
+    h1 {
+      color: rgba(0, 1, 18, 1);
+      font-size: 18px;
+      font-weight: 700;
+      font-family: sans-serif;
+    }
+    form {
+      display: block;
+      padding-top: 30px;
+
+      label {
+        display: block;
+        padding-bottom: 10px;
+        color: rgba(130, 143, 163, 1);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      input {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(130, 143, 163, 0.25);
+        padding: 8px 15px;
+        color: #000;
+        outline: none;
+        border-radius: 8px;
+      }
+      .colums {
+        display: block;
+        padding-top: 20px;
+
+        h3 {
+          color: rgba(130, 143, 163, 1);
+          font-weight: 700;
+          font-size: 14px;
+          padding-bottom: 15px;
+        }
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .button .btn {
+      text-align: center;
+      width: 100%;
+      background-color: rgba(99, 95, 199, 1);
+      color: #fff;
+      padding: 10px 0;
+      border-radius: 36px;
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+  &.dark {
+    .editBoard {
+      background-color: #2b2c37;
+      color: #fff;
+      h1 {
+        color: #fff;
+      }
+      input{
+        background-color: #2b2c37;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    .editBoard {
+      width: 90%;
+      .input {
+        width: 100%;
+      }
+    }
+  }
+}
